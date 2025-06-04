@@ -46,7 +46,7 @@ app.use('/teacher', authToken, authRole('teacher'),(req, res) => {
 
 //REDIRECT TO THE LOGIN(Authentication) MICROSERVICE
 app.use('/auth', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:5002' });
+    proxy.web(req, res, { target: 'http://44.203.120.245:5002' });
 })
 
 app.listen(4000, () => {
